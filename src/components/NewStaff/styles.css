@@ -1,0 +1,11 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    align-content: space-between;
+}
+
+.textField{
+    width: 150;
+    margin-top: 20;
+}
