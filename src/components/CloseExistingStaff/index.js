@@ -7,9 +7,10 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import './styles.css'
 
-export default function NewStaff({title}) {
+export default function CloseExistingStaff({ title }) {
   return (
-    <Box
+    <>
+      <Box
         sx={{
           width: 1000,
           height: 400,
@@ -18,7 +19,14 @@ export default function NewStaff({title}) {
         style={{ marginLeft: 200, marginTop: 40, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
         <SubHeader title={title} />
-        
+        <div className='mainContainer'>
+          {/* <Typography variant='h5' style={{fontWeight:'bold'}} >Email</Typography> */}
+          <TextField  id="outlined-basic" label="Email" variant="outlined" style={{paddingBottom:20 , width:300 }}/>
+          <Stack spacing={2} direction="row">
+            <Button variant="contained">Submit</Button>
+          </Stack>
+        </div>
       </Box>
+    </>
   )
 }

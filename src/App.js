@@ -1,11 +1,9 @@
-import Header from './components/Header';
+import Header from './components/common/Header';
 import Home from './components/Home';
 import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import ApplicationSupport from './components/ApplicationSupport';
-import ExistingStaff from './components/ExistingStaff';
 import NewStaff from './components/NewStaff';
-
-
+import CloseExistingStaff from './components/CloseExistingStaff';
 
 function App() {
   return (
@@ -14,9 +12,9 @@ function App() {
           <Header />
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path="/application-support" element={<ApplicationSupport/>}/>
-          <Route path="/existing-staff" element={<ExistingStaff/>}/>
-          <Route path="/new-staff" element={<NewStaff/>}/>
+          <Route path="/application-support" element={<ApplicationSupport title="Support Request Tool"/>}/>
+          <Route path="/new-staff" element={<NewStaff title="Register New Staff"/>} />
+          <Route path="/close-existing-staff" element={<CloseExistingStaff title="Close Existing Staff"/>} />
         </Routes>
       </BrowserRouter>
     </div>
