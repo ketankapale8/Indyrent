@@ -21,9 +21,9 @@ export default function Home() {
       >
         <div>
           <Stack spacing={2} direction="column" className='boxContainer'>
-            <Button className='Homebuttons' variant="contained" onClick={() => navigate('/application-support')} >APPLICATION SUPPORT</Button>
-            <Button className='Homebuttons' variant="contained" onClick={() => navigate('/new-staff')} >REGISTER NEW STAFF</Button>
-            <Button className='Homebuttons' variant="contained" onClick={() => navigate('/close-existing-staff')} >CLOSE AN EXISTING STAFF</Button>
+            <Button className='Homebutton' variant="contained" onClick={() => navigate('/application-support')} >APPLICATION SUPPORT</Button>
+            <Button className='Homebutton' variant="contained" onClick={() => navigate('/new-staff')} >REGISTER NEW STAFF</Button>
+            <Button className='Homebutton' variant="contained" onClick={() => navigate('/close-existing-staff')} >CLOSE AN EXISTING STAFF</Button>
           </Stack>
         </div>
       </Box>

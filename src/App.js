@@ -12,9 +12,9 @@ function App() {
           <Header />
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path="/application-support" element={<ApplicationSupport title="Support Request Tool"/>}/>
-          <Route path="/new-staff" element={<NewStaff title="Register New Staff"/>} />
-          <Route path="/close-existing-staff" element={<CloseExistingStaff title="Close Existing Staff"/>} />
+          <Route path="/application-support" element={<ApplicationSupport title="Support Request Tool:"/>}/>
+          <Route path="/new-staff" element={<NewStaff title="Register New Staff:"/>} />
+          <Route path="/close-existing-staff" element={<CloseExistingStaff title="Close Existing Staff: "/>} />
         </Routes>
       </BrowserRouter>
     </div>

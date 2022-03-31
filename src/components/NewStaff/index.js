@@ -37,16 +37,14 @@ export default function NewStaff({ title }) {
         height: 850,
         backgroundColor: '#ffffff',
       }}
-      style={{ marginLeft: 200, marginTop: 100 ,paddingTop:100, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+      style={{ marginLeft: 200, marginTop: 20 ,paddingTop:120, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
     >
       <SubHeader title={title}/>
       <div className='newStaffContainer'>
           <span className='custom-input-label'>Name</span>
           <Grid item xs={10} >
             <TextField
-              // fullWidth
               variant='outlined'
-              
               placeholder='First Name'
               className='textField'
               type="text"
@@ -70,13 +68,11 @@ export default function NewStaff({ title }) {
               type="email"
               placeholder='Email'
               className='textField'
-
             />
           </Grid>
 
 
           <span className='custom-input-label'>Phone Number</span> 
-
           <Grid xs={10}>
             <TextField
               id="outlined-required"
@@ -99,9 +95,7 @@ export default function NewStaff({ title }) {
               </Stack>
             </LocalizationProvider>
           </Grid>
-        {/* </Grid> */}
 
-        {/* <Grid container spacing={2} style={{ paddingTop: 35 }} > */}
         <span className='custom-input-label'>Work Role</span> 
           <Grid xs={10}>
             <Stack spacing={3} sx={{ width: 950 }}>
@@ -122,7 +116,16 @@ export default function NewStaff({ title }) {
             </Stack>
           </Grid>
 
-        {/* </Grid> */}
+          <Grid xs={10} className="lowerInfo">
+            <p style={{fontStyle:'italic'}}>
+            Reminder: Email addresses for staff must not be personal email addresses (example: no @gmail.com
+                    addresses)
+            </p>
+              <Stack spacing={2} direction="row">
+                <Button variant="contained" className='Homebuttons'>Submit</Button>
+              </Stack>
+          </Grid>
+
 
 
       </div>

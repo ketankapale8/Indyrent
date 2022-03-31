@@ -9,3 +9,26 @@
     
     /* padding-left: 100px; */
 }
+
+.Homebutton{
+    width: 350px;
+    height: 50px;
+    background: rgb(72, 181, 228) !important;
+    border-color: rgb(72, 181, 228) !important;
+    border-bottom-color: rgb(72, 181, 228) !important;
+    border-right-color: rgb(72, 181, 228) !important;
+    border-radius: 6px;
+    border-bottom-style: unset !important;
+    border-right-style: unset !important;
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    padding: 9px 40px;
+}
+
+.custom-input-label{
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}

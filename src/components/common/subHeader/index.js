@@ -5,7 +5,7 @@ export default function SubHeader({title}) {
   return (
     <div className='subHeaderContainer'>
         <h3 className='subHeaderTitle'>{title}</h3>
-        <hr/>
+        <hr className='hr'/>
     </div>
   )
 }
