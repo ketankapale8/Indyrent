@@ -1,11 +1,22 @@
-.mainContainer{
+body{
+    background-color: #f1f7f9;
+}
+
+.newStaffContainer{
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
-    align-content: space-between;
+    align-items: 'flex-start';
+    margin-left: 25px;
+    
 }
 
 .textField{
-    width: 150;
+    width: 950px !important;
     margin-top: 20;
+}
+
+.custom-input-label{
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }

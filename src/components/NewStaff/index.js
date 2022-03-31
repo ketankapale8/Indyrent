@@ -10,7 +10,7 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import Autocomplete from '@mui/material/Autocomplete';
-import './styles.css'
+import '../NewStaff/styles.css'
 
 export default function NewStaff({ title }) {
   const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
@@ -34,41 +34,39 @@ export default function NewStaff({ title }) {
     <Box
       sx={{
         width: 1000,
-        height: 400,
-        backgroundColor: '#FFFFF',
+        height: 850,
+        backgroundColor: '#ffffff',
       }}
-      style={{ marginLeft: 200, marginTop: 40, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+      style={{ marginLeft: 200, marginTop: 100 ,paddingTop:100, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
     >
-      <SubHeader title={title} />
-      <div className='mainContainer'>
-        <Grid container spacing={2}>
-          <Grid xs={4} >
+      <SubHeader title={title}/>
+      <div className='newStaffContainer'>
+          <span className='custom-input-label'>Name</span>
+          <Grid item xs={10} >
             <TextField
-              id="outlined-required"
-              label="First Name"
-              // defaultValue="First Name"
+              // fullWidth
+              variant='outlined'
+              
               placeholder='First Name'
               className='textField'
               type="text"
             />
           </Grid>
 
-          <Grid xs={4}>
+          <span className='custom-input-label'>Last Name</span>
+          <Grid xs={10}>
             <TextField
-              id="outlined-required"
-              label="Last Name"
+              id="outlined"
               placeholder='Last Name'
               type="text"
               className='textField'
-
-
             />
           </Grid>
 
-          <Grid xs={4}>
+          <span className='custom-input-label'>Email</span> 
+          <Grid xs={10}>
             <TextField
-              id="outlined-required"
-              label="Email"
+              id="outlined"
               type="email"
               placeholder='Email'
               className='textField'
@@ -77,22 +75,22 @@ export default function NewStaff({ title }) {
           </Grid>
 
 
+          <span className='custom-input-label'>Phone Number</span> 
 
-          <Grid xs={4} style={{ paddingTop: 20 }}>
+          <Grid xs={10}>
             <TextField
               id="outlined-required"
-              label="Phone Number"
               placeholder='Phone Number'
               className='textField'
               type="number"
             />
           </Grid>
 
-          <Grid xs={5} style={{ paddingTop: 20 }}>
+          <span className='custom-input-label'>Start Date</span> 
+          <Grid xs={10} style={{width :950}}>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <Stack spacing={3}>
+              <Stack spacing={2} >
                 <DesktopDatePicker
-                  label="Start Date"
                   inputFormat="MM/dd/yyyy"
                   value={value}
                   onChange={handleChange}
@@ -101,32 +99,30 @@ export default function NewStaff({ title }) {
               </Stack>
             </LocalizationProvider>
           </Grid>
-        </Grid>
+        {/* </Grid> */}
 
-        <Grid container spacing={2} style={{ paddingTop: 35 }} >
-          <Grid xs={4}>
-            <Stack spacing={3} sx={{ width: 195 }}>
+        {/* <Grid container spacing={2} style={{ paddingTop: 35 }} > */}
+        <span className='custom-input-label'>Work Role</span> 
+          <Grid xs={10}>
+            <Stack spacing={3} sx={{ width: 950 }}>
               <Autocomplete
-                id="work-role"
-                Work Role
                 options={dropdownOptions.map((option) => option.items)}
-                renderInput={(params) => <TextField {...params} label="Work Role" />}
+                renderInput={(params) => <TextField {...params} placeholder="Select"/>}
               />
             </Stack>
           </Grid>
 
-          <Grid xs={4}>
-            <Stack spacing={2} sx={{ width: 405 }}>
+          <span className='custom-input-label'>Community Center</span> 
+          <Grid xs={10}>
+            <Stack spacing={2} sx={{ width: 950 }}>
               <Autocomplete
-                id="work-role"
-                Work Role
                 options={dropdownOptions.map((option) => option.items)}
-                renderInput={(params) => <TextField {...params} label="Community Center" />}
+                renderInput={(params) => <TextField {...params} placeholder="Select" />}
               />
             </Stack>
           </Grid>
 
-        </Grid>
+        {/* </Grid> */}
 
 
       </div>

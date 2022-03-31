@@ -15,7 +15,7 @@ export default function Home() {
         sx={{
           width: 1000,
           height: 400,
-          backgroundColor: '#EAEAEA',
+          backgroundColor: '#ffffff',
         }}
         style={{ marginLeft: 200, marginTop: 30, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
