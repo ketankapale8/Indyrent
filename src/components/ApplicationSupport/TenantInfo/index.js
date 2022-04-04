@@ -32,7 +32,7 @@ export default function TenantInfo() {
   ]
   return (
     <>
-    <TableContainer component={Paper} style={{paddingLeft:'10px'}}>
+    <TableContainer component={Paper}>
     <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
       <TableBody>
           {rows.map((row) => (
@@ -50,7 +50,7 @@ export default function TenantInfo() {
         </TableBody>
 
         <div className='subHeaderContainers'>
-        <h3 className='subHeaderTitles'>Status</h3>
+         <h3 className='subHeaderTitles'>Status</h3>
         <hr className='hr'/>
       </div>
 
