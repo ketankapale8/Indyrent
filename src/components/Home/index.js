@@ -3,11 +3,12 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
+import SubHeader from '../common/subHeader';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 
 import './styles.css'
 
-export default function Home() {
+export default function Home({title}) {
   const navigate = useNavigate()
   return (
     <>
@@ -17,9 +18,11 @@ export default function Home() {
           height: 400,
           backgroundColor: '#ffffff',
         }}
-        style={{ marginLeft: 200, marginTop: 30, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+        style={{ marginLeft: 200, marginTop: 30, paddingTop:70, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
         <div>
+        <SubHeader title={title}  />
+
           <Stack spacing={2} direction="column" className='boxContainer'>
             <Button className='Homebutton' variant="contained" onClick={() => navigate('/application-support')} >APPLICATION SUPPORT</Button>
             <Button className='Homebutton' variant="contained" onClick={() => navigate('/new-staff')} >REGISTER NEW STAFF</Button>

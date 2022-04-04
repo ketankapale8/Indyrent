@@ -7,11 +7,11 @@ import CloseExistingStaff from './components/CloseExistingStaff';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <BrowserRouter>
           <Header />
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Home title="Choose operation"/> }/>
           <Route path="/application-support" element={<ApplicationSupport title="Support Request Tool:"/>}/>
           <Route path="/new-staff" element={<NewStaff title="Register New Staff:"/>} />
           <Route path="/close-existing-staff" element={<CloseExistingStaff title="Close Existing Staff: "/>} />

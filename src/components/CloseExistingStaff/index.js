@@ -16,7 +16,7 @@ export default function CloseExistingStaff({ title }) {
           height: 400,
           backgroundColor: '#FFFFFF',
         }}
-        style={{ marginLeft: 200, marginTop: 40, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+        style={{ marginLeft: 200, marginTop: 40, paddingTop:50, alignContent: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
       >
         <SubHeader title={title} />
         <div className='mainContainer'>

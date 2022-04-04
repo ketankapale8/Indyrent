@@ -50,7 +50,6 @@ export default function NewStaff({ title }) {
               type="text"
             />
           </Grid>
-
           <span className='custom-input-label'>Last Name</span>
           <Grid xs={10}>
             <TextField
@@ -60,7 +59,6 @@ export default function NewStaff({ title }) {
               className='textField'
             />
           </Grid>
-
           <span className='custom-input-label'>Email</span> 
           <Grid xs={10}>
             <TextField
@@ -90,7 +88,7 @@ export default function NewStaff({ title }) {
                   inputFormat="MM/dd/yyyy"
                   value={value}
                   onChange={handleChange}
-                  renderInput={(params) => <TextField {...params} />}
+                  renderInput={(params) => <TextField {...params} placeholder="dd-mm-yy" />}
                 />
               </Stack>
             </LocalizationProvider>
@@ -125,9 +123,6 @@ export default function NewStaff({ title }) {
                 <Button variant="contained" className='Homebuttons'>Submit</Button>
               </Stack>
           </Grid>
-
-
-
       </div>
 
     </Box>
