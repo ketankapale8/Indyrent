@@ -45,7 +45,7 @@ export default function ApplicationSupport({title}) {
         height: '60%',
         backgroundColor: '#ffffff',
       }}
-      style={{marginLeft:150,marginTop:80, paddingTop:220, alignContent:'center',display:'flex',flexDirection:'column' ,justifyContent:'center'}}
+      style={{marginLeft:150,marginTop:80, paddingTop:220, alignContent:'center',display:'flex',flexDirection:'column' ,justifyContent:'center', fontFamily:'Raleway'}}
     >
     <SubHeader title={titlesInfo[page]}/>
           {handlePageInfo()}

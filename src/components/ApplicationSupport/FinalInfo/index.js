@@ -42,9 +42,9 @@ export default function FinalInfo() {
   ]
   return (
     <>
-    <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-      <TableBody>
+    <TableContainer component={Paper} >
+    <Table sx={{ minWidth: 550  }} size="small" aria-label="a dense table">
+      <TableBody style={{margin:10}}>
           {rows.map((row) => (
             <TableRow
               key={row.name}
