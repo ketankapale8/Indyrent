@@ -38,7 +38,6 @@ export default function FinalInfo() {
   const rows2 = [
     taskDetails('Action','Resend additional funding application invite'),
     taskDetails('Details/Additional Details','')
-
   ]
   return (
     <>

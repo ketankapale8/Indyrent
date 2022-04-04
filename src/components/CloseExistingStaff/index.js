@@ -20,7 +20,6 @@ export default function CloseExistingStaff({ title }) {
       >
         <SubHeader title={title} />
         <div className='mainContainer'>
-          {/* <Typography variant='h5' style={{fontWeight:'bold'}} >Email</Typography> */}
           <span className='custom-input-label'>Email</span>
           <TextField  id="outlined-basic" variant="outlined" style={{paddingBottom:20 , width:350 }} placeholder="Email"/>
           <Stack spacing={2} direction="row">
