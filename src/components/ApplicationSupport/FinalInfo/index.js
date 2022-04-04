@@ -42,7 +42,7 @@ export default function FinalInfo() {
   ]
   return (
     <>
-    <TableContainer component={Paper} style={{paddingLeft:'10px'}}>
+    <TableContainer component={Paper}>
     <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
       <TableBody>
           {rows.map((row) => (

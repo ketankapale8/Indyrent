@@ -6,7 +6,7 @@
     
 }
 
-.lowerInfo{
+.lowerInfoComponent{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,8 +18,8 @@
     /* padding-top: 20px; */
 }
 
-.Homebuttons{
-    width: 120px;
+.Commonbutton{
+    width: 80px;
     height: 50px;
     margin-left: 120px !important;
     margin-right: 120px !important;
