@@ -16,7 +16,7 @@ import {useDispatch , useSelector} from 'react-redux'
 
 export default function NewStaff({ title }) {
   const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
-  const [name , setName] = useState('')
+  const [firstName , setName] = useState('')
   const dispatch = useDispatch();
 
   useEffect(()=>{
@@ -24,7 +24,7 @@ export default function NewStaff({ title }) {
   },[])
   
   const handleSubmit = () =>{
-    dispatch(registerUser(name))
+    dispatch(registerUser(firstName))
 
   }
 
@@ -64,7 +64,7 @@ export default function NewStaff({ title }) {
               placeholder='First Name'
               className='textField'
               type="text"
-              value={name}
+              value={firstName}
               onChange={(e)=>setName(e.target.value)}
             />
           </Grid>
