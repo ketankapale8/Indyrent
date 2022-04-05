@@ -5,8 +5,9 @@ import registerUser from '../../reducers/index'
 export function* handlestaffRegistrations(action){
     try{
         const response = yield call(requestGetStaffRegistrations);
-        const {data} = response;
-        yield put(registerUser(data))
+        console.log(response)
+        // const {data} = response;
+        yield put(registerUser(response.data))
     }catch(err){
         console.log(err)
     }

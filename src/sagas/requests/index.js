@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-export function  requestGetStaffRegistrations(data){
-    return axios.request({
+export function* requestGetStaffRegistrations({data}){
+    return axios({
         method : 'POST',
         headers :{
             Accept : 'application/json',
@@ -11,7 +11,7 @@ export function  requestGetStaffRegistrations(data){
             data
         }),
         url : "http://54.145.54.64/indyrent_codeigniter/IndyRentFrequentSupportTickets/staff_registration/",
-        
+
     })
 
 }
