@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import SubHeader from '../common/subHeader'
 import { Typography } from '@mui/material'
@@ -10,10 +10,26 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import Autocomplete from '@mui/material/Autocomplete';
+import { registerUser } from '../../reducers';
 import '../NewStaff/styles.css'
+import {useDispatch , useSelector} from 'react-redux'
 
 export default function NewStaff({ title }) {
   const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
+  const [name , setName] = useState('')
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    handleSubmit()
+  },[])
+  
+  const handleSubmit = () =>{
+    dispatch(registerUser(name))
+
+  }
+
+  const data = useSelector((state)=>state.staffUpdate)
+  console.log(data)
 
   const dropdownOptions = [
     {
@@ -48,6 +64,8 @@ export default function NewStaff({ title }) {
               placeholder='First Name'
               className='textField'
               type="text"
+              value={name}
+              onChange={(e)=>setName(e.target.value)}
             />
           </Grid>
           <span className='custom-input-label'>Last Name</span>
@@ -120,7 +138,7 @@ export default function NewStaff({ title }) {
                     addresses)
             </p>
               <Stack spacing={2} direction="row">
-                <Button variant="contained" className='Homebuttons'>Submit</Button>
+                <Button onClick={()=>handleSubmit()} variant="contained" className='Homebuttons'>Submit</Button>
               </Stack>
           </Grid>
       </div>
